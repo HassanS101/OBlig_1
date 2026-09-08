@@ -11,7 +11,23 @@ public class Oblig1 {
     }
 
     // Oppgave 1
-    public static int maks(int[] a) {throw new UnsupportedOperationException();}
+    public static int maks(int[] a) {
+        if (a.length < 1)
+            throw new java.util.NoSuchElementException("Tabellen a er tom!");
+
+        int m = 0;  // indeks til foreløpig største verdi (m for maks)
+
+        for (int i = 0; i < a.length - 1; i++) {
+            if (a[i] > a[i + 1]) {
+
+                int variabel = a[i];
+                a[i] = a[i + 1];
+                a[i + 1] = variabel;
+            }
+        }
+
+        return a[a.length - 1];  // returnerer indeksen/posisjonen til største verdi
+    }
 
     public static int ombyttinger(int[] a) {throw new UnsupportedOperationException();}
 
