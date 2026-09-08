@@ -11,7 +11,7 @@ public class Oblig1 {
     }
 
     // Oppgave 1
-    public static int maks(int[] a) {
+    public static int ombyttinger(int[] a) {
         if (a.length < 1)
             throw new java.util.NoSuchElementException("Tabellen a er tom!");
 
@@ -28,8 +28,6 @@ public class Oblig1 {
 
         return a[a.length - 1];  // returnerer verdien til størst verdi
     }
-
-    public static int ombyttinger(int[] a) {throw new UnsupportedOperationException();}
 
     // Oppgave 2
     public static int antallUlikeSortert(int[] a) {throw new UnsupportedOperationException();}
