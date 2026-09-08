@@ -29,6 +29,11 @@ public class Oblig1 {
         return a[a.length - 1];  // returnerer verdien til størst verdi
     }
 
+    (a) det blir n - 1 sammenlikninger
+    (b) det blir færrest ombyttinger om den største verdien i tabellen er første posisjon.
+    (c) det blir flest ombyttinger om den største verdien i tabellen er i siste posisjon.
+    (d) 
+
     // Oppgave 2
     public static int antallUlikeSortert(int[] a) {throw new UnsupportedOperationException();}
 
