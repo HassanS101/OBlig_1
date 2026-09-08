@@ -84,7 +84,11 @@ public class Oblig1 {
     }
 
     // Oppgave 4
-    public static void sorter(int[] a, int fra, int til) {throw new UnsupportedOperationException();}
+    public static void sorter(int[] a, int fra, int til) {
+        if(fra < 0 || til > a.length){
+            throw new IndexOutOfBoundsException("Ugyldig fra eller til-index");
+        }
+    }
 
     // Oppgave 5
     public static void delsortering(int[] a) {throw new UnsupportedOperationException();}
