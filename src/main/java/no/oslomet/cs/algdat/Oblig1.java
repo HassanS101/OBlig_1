@@ -54,7 +54,7 @@ public class Oblig1 {
             }
         }
 
-        return AntallUlike;
+        return antallUlike;
     }
 
     // Oppgave 3
@@ -63,6 +63,23 @@ public class Oblig1 {
         if(a.length == 0){
             return 0;
         }
+
+        for(int i = 0; i < a.length; i++){
+            boolean funnetTidligere = false;
+
+            for(int j = 0; j < i; j++){
+                if(a[i] == a[j]){
+                    funnetTidligere = true;
+                    break;
+                }
+            }
+
+            if(!funnetTidligere){
+                antallUlike++;
+            }
+        }
+
+        return antallUlike;
     
     }
 
