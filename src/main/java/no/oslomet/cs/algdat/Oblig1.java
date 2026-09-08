@@ -88,6 +88,21 @@ public class Oblig1 {
         if(fra < 0 || til > a.length){
             throw new IndexOutOfBoundsException("Ugyldig fra eller til-index");
         }
+        if(fra >= til){
+            return;
+        }
+
+        for(int i = fra + 1; i < til; i++){
+            int verdi = a[i];
+            int j = i - 1;
+
+            while(j >= fra && a[j] > verdi){
+                a[j + 1] = a[j];
+                j--;
+            }
+
+            a[j + 1] = verdi;
+        }
     }
 
     // Oppgave 5
