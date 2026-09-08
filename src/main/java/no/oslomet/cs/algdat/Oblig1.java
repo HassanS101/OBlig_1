@@ -36,7 +36,22 @@ public class Oblig1 {
     (d) 
 
     // Oppgave 2
-    public static int antallUlikeSortert(int[] a) {throw new UnsupportedOperationException();}
+    public static int antallUlike(int[] a){
+
+        int AntallUlike = 1;
+
+        for(int i = 0; i < a.length - 1; i++){
+            if(a[i] > a[i + 1]){
+                throw new IllegalStateException("Tabellen er ikke sortert");
+            }
+
+            if(a[i] != a[i+1]){
+                AntallUlike++;
+            }
+        }
+
+        return AntallUlike;
+    }
 
     // Oppgave 3
     public static int antallUlikeUsortert(int[] a) {throw new UnsupportedOperationException();}
