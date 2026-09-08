@@ -11,7 +11,7 @@ public class Oblig1 {
     }
 
     // Oppgave 1
-    public static int ombyttinger(int[] a) {
+    public static int maks(int[] a) {
         if (a.length < 1)
             throw new java.util.NoSuchElementException("Tabellen a er tom!");
 
@@ -25,8 +25,9 @@ public class Oblig1 {
                 a[i + 1] = variabel;
             }
         }
-
         return a[a.length - 1];  // returnerer verdien til størst verdi
+    }
+    public static int ombyttinger(int[] a) {
     }
 
     (a) det blir n - 1 sammenlikninger
