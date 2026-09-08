@@ -26,7 +26,7 @@ public class Oblig1 {
             }
         }
 
-        return a[a.length - 1];  // returnerer indeksen/posisjonen til største verdi
+        return a[a.length - 1];  // returnerer verdien til størst verdi
     }
 
     public static int ombyttinger(int[] a) {throw new UnsupportedOperationException();}
