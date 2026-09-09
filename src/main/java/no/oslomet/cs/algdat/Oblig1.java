@@ -117,7 +117,7 @@ public class Oblig1 {
             int høyre = a.length - 1;
 
             while(a[venstre] <= høyre){
-                if(vesntre % 2 != 0){
+                if(venstre % 2 != 0){
                     venstre++;
                 }
 
