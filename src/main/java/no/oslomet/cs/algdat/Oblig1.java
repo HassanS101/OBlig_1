@@ -28,7 +28,27 @@ public class Oblig1 {
         return a[a.length - 1];  // returnerer verdien til størst verdi
     }
     public static int ombyttinger(int[] a) {
+    if (a == null || a.length < 1) {
+        throw new IllegalArgumentException("Tabellen må ha minst ett element.");
     }
+
+    int antallOmbyttinger = 0;
+
+    
+    for (int i = 0; i < a.length - 1; i++) {
+        
+        if (a[i] > a[i + 1]) {
+           
+            int temp = a[i];
+            a[i] = a[i + 1];
+            a[i + 1] = temp;
+
+            antallOmbyttinger++;
+        }
+    }
+
+    return antallOmbyttinger;
+}
 
     (a) det blir n - 1 sammenlikninger
     (b) det blir færrest ombyttinger om den største verdien i tabellen er første posisjon.
