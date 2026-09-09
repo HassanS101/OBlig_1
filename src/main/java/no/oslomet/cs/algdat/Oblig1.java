@@ -49,11 +49,12 @@ public class Oblig1 {
 
     return antallOmbyttinger;
 }
+    //denne metoden er mye dårligere fordi den gjør dyre operasjoner altså n ombyttinger mens en vanlig maksmetode oppdatere kun en variabel.
 
-    (a) det blir n - 1 sammenlikninger
+    /* (a) det blir n - 1 sammenlikninger
     (b) det blir færrest ombyttinger om den største verdien i tabellen er første posisjon.
     (c) det blir flest ombyttinger om den største verdien i tabellen er i siste posisjon.
-    (d) 
+    (d) gjennomsnittlig antall ombyttinger er n - ln(n) - 0,5772 */
 
     // Oppgave 2
     public static int antallUlike(int[] a){
