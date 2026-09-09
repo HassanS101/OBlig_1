@@ -64,6 +64,8 @@ public class Oblig1 {
             return 0;
         }
 
+        int antallUlike = 0;
+
         for(int i = 0; i < a.length; i++){
             boolean funnetTidligere = false;
 
