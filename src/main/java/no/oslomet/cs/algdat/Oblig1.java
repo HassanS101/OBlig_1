@@ -87,25 +87,48 @@ public class Oblig1 {
 
     // Oppgave 4
     public static void sorter(int[] a, int fra, int til) {
-        if(fra < 0 || til > a.length){
-            throw new IndexOutOfBoundsException("Ugyldig fra eller til-index");
-        }
-        if(fra >= til){
-            return;
-        }
+    
+    if (fra < 0 || til > a.length) {
+        throw new IndexOutOfBoundsException("Ugyldig fra- eller til-indeks.");
+    }
 
-        for(int i = fra + 1; i < til; i++){
-            int verdi = a[i];
-            int j = i - 1;
+    if (fra >= til - 1) {
+        return;
+    }
 
-            while(j >= fra && a[j] > verdi){
-                a[j + 1] = a[j];
-                j--;
-            }
+    quicksort(a, fra, til - 1);
+}
 
-            a[j + 1] = verdi;
+private static void quicksort(int[] a, int venstre, int høyre) {
+    if (venstre >= høyre) {
+        return;
+    }
+
+    int p = partisjoner(a, venstre, høyre);
+
+    quicksort(a, venstre, p - 1);
+    quicksort(a, p + 1, høyre);
+}
+
+private static int partisjoner(int[] a, int venstre, int høyre) {
+    int pivot = a[høyre];
+    int i = venstre - 1;
+
+    for (int j = venstre; j < høyre; j++) {
+        if (a[j] <= pivot) {
+            i++;
+            int temp = a[i];
+            a[i] = a[j];
+            a[j] = temp;
         }
     }
+
+    int temp = a[i + 1];
+    a[i + 1] = a[høyre];
+    a[høyre] = temp;
+
+    return i + 1;
+}
 
     // Oppgave 5
     public static void delsortering(int[] a) {
