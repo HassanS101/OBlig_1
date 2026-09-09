@@ -106,7 +106,34 @@ public class Oblig1 {
     }
 
     // Oppgave 5
-    public static void delsortering(int[] a) {throw new UnsupportedOperationException();}
+    public static void delsortering(int[] a) {
+        if(a.length == 0){
+            return;
+        }
+
+            int venstre = 0;
+            int høyre = a.length - 1;
+
+            while(a[venstre] <= høyre){
+                if(vesntre % 2 != 0){
+                    venstre++;
+                }
+
+                else if(a[høyre] & 2 = 0){
+                    høyre--;
+                }
+                else{
+                    int bytt = a[venstre];
+                    a[venstre] = a[høyre];
+                    a[høyre] = bytt;
+                    venstre++;
+                    høyre--;
+                }
+            }
+            sorter(a, 0, venstre);
+
+            sorter(a, venstre, a.length);
+    }
 
     // Oppgave 6
     public static void rotasjon(char[] a) {throw new UnsupportedOperationException();}
