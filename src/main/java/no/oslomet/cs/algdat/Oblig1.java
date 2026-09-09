@@ -121,7 +121,7 @@ public class Oblig1 {
                     venstre++;
                 }
 
-                else if(a[høyre] & 2 = 0){
+                else if(a[høyre] % 2 == 0){
                     høyre--;
                 }
                 else{
