@@ -154,7 +154,24 @@ public class Oblig1 {
     public static void rotasjon(char[] a, int k) {throw new UnsupportedOperationException();}
 
     // Oppgave 8
-    public static String flett(String s, String t) {throw new UnsupportedOperationException();}
+    public static String flett(String s, String t) {
+    StringBuilder result = new StringBuilder();
+
+    int maxLengde = Math.max(s.length(), t.length());
+
+    for (int i = 0; i < maxLengde; i++) {
+        
+        if (i < s.length()) {
+            result.append(s.charAt(i));
+        }
+        
+        if (i < t.length()) {
+            result.append(t.charAt(i));
+        }
+    }
+
+    return result.toString();
+}
 
     public static String flett(String... s) {throw new UnsupportedOperationException();}
 
